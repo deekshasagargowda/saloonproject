@@ -1,0 +1,41 @@
+/* src/components/CounterSection.css */
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  background-color: black;
+  border-radius: 1px;
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #000000;
+  border-radius:10px;
+  transition: transform 0.3s;
+}
+
+.counter-box:hover {
+  transform: scale(1.1);
+}
+
+.counter-label {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.counter-value {
+  font-size: 30px;
+  font-weight: bold;
+  color: orange;
+  animation: countAnimation 1s ease-in-out;
+}
+
+@keyframes countAnimation {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,77 @@
+/* src/components/MainImage.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap'); /* Stylish font */
+
+.main-image {
+  background-image: url('/public/images/about.jpg'); /* Path corrected */
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Optional gradient overlay for readability */
+.main-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+/* Overlay text styling */
+.overlay-text {
+  position: relative;
+  z-index: 2;
+  color: #f6f3ef;
+  text-align: center;
+  width: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Playfair Display', serif; /* Applied stylish font */
+  letter-spacing: 2px;
+  line-height: 8.2;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Font styles for salon name and "About Us" text */
+.overlay-text .salon-name {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.overlay-text .about-text {
+  font-size: 7.5em;
+  margin-top: 10px;
+  font-weight: 300;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+/* Media query for responsive font size */
+@media (max-width: 768px) {
+  .overlay-text .salon-name {
+    font-size: 2em;
+  }
+
+  .overlay-text .about-text {
+    font-size: 1.2em;
+  }
+}

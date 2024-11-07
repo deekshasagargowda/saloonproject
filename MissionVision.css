@@ -1,0 +1,67 @@
+.mission-vision-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the containers */
+    margin-top: 50px; /* Space above the container */
+  }
+  
+  .square {
+    width: 400px; /* Set a fixed width for square shape */
+    height: 300px; /* Set a fixed height for square shape */
+    border: 1px solid #ccc; /* Border around the squares */
+    border-radius: 10px; /* Rounded corners */
+    margin: 0 16px; /* Space between the squares */
+    padding: 10px; /* Padding inside the square */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Cursor style on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-align: justify;
+    margin-bottom: 40px; /* Space below each square element */
+  }
+  
+  .square:hover {
+    background-color: #e09410; /* Light background on hover */
+    color: white;
+  }
+  
+  .modal {
+    position: fixed; /* Position fixed to overlay the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(131, 173, 211, 0.7); /* Semi-transparent background */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .modal-content {
+    background-color: rgb(224, 165, 16); /* Modal background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside modal */
+    width: 20%; /* Width of the modal */
+    max-width: 600px; /* Maximum width */
+    color: aliceblue;
+    text-align: justify;
+    position: relative; /* Position for the close button */
+  }
+  
+  .close {
+    position: absolute; /* Position close button */
+    top: 10px; /* Position from top */
+    right: 15px; /* Position from right */
+    font-size: 24px; /* Font size for close button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .close:hover {
+    color: red; /* Change color on hover */
+  }
+  
+  .mission, .vision {
+    font-weight: bold;
+    color: #333; /* Text color */
+    font-size: 1.2em; /* Slightly larger font size */
+  }
+  
